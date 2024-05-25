@@ -93,6 +93,7 @@ On the users device you are connecting they will be prompted with the screen bel
 
 
 Now we are in remote control of our users VM
+
 <img width="637" alt="Screenshot 2024-05-24 at 5 23 00 PM" src="https://github.com/Jtalbert15/Remote-accessing-a-domain-users-computer/assets/66844406/da790aca-f385-46ff-8a35-22b1875613c5">
 
 To end the session you can click the X button at the top of the screen
