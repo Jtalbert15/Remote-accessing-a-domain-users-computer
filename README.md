@@ -1,7 +1,16 @@
 # Remote-accessing-a-domain-users-computer
-In this lab we will remotely access a users computer
 
-In previous labs we have created a Windows Server VM and a Windows 10 VM. Now We are going to remotely access our windows 10 computer.
+<img width="280" alt="Screenshot 2024-06-16 at 11 35 27 AM" src="https://github.com/Jtalbert15/Remote-accessing-a-domain-users-computer/assets/66844406/7978d680-645b-4141-a0ca-a16aeac7832a">
+
+<h1>Summary</h1>
+
+ In this lab we will remotely access a users computer. We will do this using Remote Desktop Connection provided by Windows. We will check that we can communicate with the computer via the ping command in command line, We will then ensure both computers have their remote desktop services on both computers, and finally we will remote into the users machine.
+
+ <h1>More About Remote Desktop Protocol</h1>
+
+ In order to accomplish this task we will utilize TCP port 3389. TCP (Transmission Control Protocol) is a connection based protocol meaning we need to establish a connection before we can send data. Simply put we start a TCP data transfer with a "3 way handshake". First our computer needs to send out a request to connect, then the receiving machine needs to acknowledge the request by communicating back to the first machine, then finally the sending machine will notify the receiving machine that the data is on the way. 
+
+<h1>Step 1) Finding the Machine we want to Connect to</h1>
 
 To start we need to find out what the computers name is that we created so on our Windows Server VM we are going to navigate to Active Directory Users and Computers
 
@@ -10,6 +19,8 @@ To start we need to find out what the computers name is that we created so on ou
 Double click and you should see the name of our computer
 
 <img width="631" alt="Screenshot 2024-05-24 at 10 16 36 AM" src="https://github.com/Jtalbert15/Remote-accessing-a-domain-users-computer/assets/66844406/052e3ead-5fd3-4bbf-b76a-8adbb1626a1a">
+
+<h1> Step 2) Communicating with the Machine via the ping command</h1>
 
 Now before we remote into that computer lets first check that we can communicate with the computer.
 
@@ -26,6 +37,8 @@ Type ping followed by the name of your computer on your domain
 If you were successful in sending over the data you should see something like you see above
 
 If not  make sure your VM is turned on or you may have to change your firewall settings
+
+<h1>Step 3)Enabling Remote Desktop Services on both Machines</h1>
 
 Now in the bottom left search bar we want to enable remote desktop services. To do this we need to search for services
 
@@ -64,6 +77,8 @@ Double click on Services
 Find Remote Desktop Services and enable it like we did on the domain
 
 <img width="632" alt="Screenshot 2024-05-24 at 4 55 14 PM" src="https://github.com/Jtalbert15/Remote-accessing-a-domain-users-computer/assets/66844406/ce8dacc8-4479-4785-80f7-60a422179ec8">
+
+<h1>Step 4) Remoting into the Machine</h1>
 
 Now we can Remote into that users device. To do this navigate to the search bar and search remote desktop connection 
 
